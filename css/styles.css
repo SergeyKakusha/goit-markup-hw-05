@@ -10,6 +10,7 @@
     --icono-color: #8e8f99;
     --cocil-icono: #4d5ae5;
     --icono-hover: #31d0aa;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     h1,h2,h3,p {
@@ -88,6 +89,7 @@ color: var(--accent-color);
 display: inline-block;
 padding-top: 24px;
 padding-bottom: 24px;
+transition: color var(--transition);
 }
 
 .menu-link:hover,
@@ -112,6 +114,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--text-color);
+transition: color var(--transition);
 }
 
 /* ------ Header-container -------------*/
@@ -171,6 +174,7 @@ gap: 40px;
     color: var(--fond-color);
     background: var(--logo-btn-color);
     cursor: pointer;
+    transition: color var(--transition), backgraund-color var(--transition); 
     }
     
     .modal-btn:hover,
@@ -430,9 +434,9 @@ gap: 24px;
     align-items: center;
     width: 100%;
     height: 100%;
-    
     border-radius: 50%;
     background-color: var(--cocil-icono);
+    transition: backgraund-color var(--transition);
 }
  .list-link-icon-four {
     fill: var(--fond-btn-color);
@@ -486,6 +490,7 @@ gap: 24px;
     color: #8e8f99;
     width: 100%;
     height: 100%;
+    transition: color var(--transition), border-color var(--transition); 
 
 }
 .icono-five-list:hover,
@@ -514,6 +519,7 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--logo-btn-color);
+
 }
 
 
@@ -581,9 +587,9 @@ justify-content: center;
 align-items: center;
 width: 100%;
 height: 100%;
-
 border-radius: 50%;
-background-color: var(--cocil-icono)
+background-color: var(--cocil-icono);
+transition: background-color var(--transition);
 
 }
 
@@ -632,6 +638,8 @@ letter-spacing: 0.04em;
 color: var(--logo-btn-color);
 background-color: var(--fond-btn-color);
 cursor: pointer;
+transition: color var(--transition), backgraund var(--transition),
+ border var(--transition), box-shadow var(--transition);
 }
 /* Portfoli-container */
 .visually-hidden {
@@ -671,10 +679,13 @@ cursor: pointer;
 }
 .flex-items-portfolio {
     width: calc((100% - 48px) / 3);
+
  }
 
 .post {
-    max-width: 100%;
+    
+    position: relative;
+    overflow: hidden;
 }
     
 
@@ -692,5 +703,88 @@ cursor: pointer;
 }
 
 .link-a {
-    display: block; 
+    display: block;
+    transition: box-shadowor var(--transition);
+    
 }
+.overlay {
+font-size: 16px;
+line-height: 1,5;
+letter-spacing: 0.02em;
+padding-left: 32px;
+padding-right: 32px;
+padding-top: 40px;
+background: #4D5AE5;
+mix-blend-mode: normal;
+color: #F4F4FD;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+transform: translate(0, 100%);
+transform: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.link-a:hover .overlay,
+.link-a:focus .overlay {
+    transform: translate(0, 0);
+}
+/* ====================== Modal-window ============= */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: opacity var(--transition),  visibility var(--transition);
+    
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal {
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 408px;
+    height: 584px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: border-color var(--transition);
+    
+
+
+}
+.modal-close-btn-icon {
+    transition: fill var(--transition);
+}
+.modal-close-bt:hover,
+.modal-close-bt:focus {
+    border-color: var(--accent-color);
+}
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+    fill: var(--accent-color);
+}
+
