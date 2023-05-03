@@ -174,10 +174,10 @@ gap: 40px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--frequent-color);
+    color: var(--accent-color);
     transition: color var(--transition);
   }
-
+  
 /*=================== Hero-section-1 ============================*/
     
     .main-title {
@@ -195,9 +195,9 @@ gap: 40px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--fond-color);
-    background: var(--logo-btn-color);
+    background-color: var(--logo-btn-color);
     cursor: pointer;
-    transition: color var(--transition), backgraund-color var(--transition); 
+    transition: color var(--transition), background-color var(--transition); 
     }
     
     .modal-btn:hover,
@@ -459,7 +459,7 @@ gap: 24px;
     height: 100%;
     border-radius: 50%;
     background-color: var(--cocil-icono);
-    transition: backgraund-color var(--transition);
+    transition: background-color var(--transition);
 }
  .list-link-icon-four {
     fill: var(--fond-btn-color);
@@ -661,8 +661,8 @@ letter-spacing: 0.04em;
 color: var(--logo-btn-color);
 background-color: var(--fond-btn-color);
 cursor: pointer;
-transition: color var(--transition), bbackground var(--transition),
- border var(--transition), box-shadow var(--transition);
+transition: border var(--transition), color var(--transition), box-shadow var(--transition), background-color var(--transition);
+
 }
 /* Portfoli-container */
 .visually-hidden {
@@ -739,7 +739,7 @@ transition: color var(--transition), bbackground var(--transition),
     transform: translate(0, 100%);
     transition: transform 500ms linear;
     background: #4D5AE5;
-    background: linear-gradient(0deg, rgba(77, 90, 229, 0.7), rgba(77, 90, 229, 0.7));
+    
     background-blend-mode: soft-light, normal;
     mix-blend-mode: normal;
     color: #f4f4fd;
@@ -797,7 +797,7 @@ transition: color var(--transition), bbackground var(--transition),
     border-radius: 50%;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: border-color var(--transition);
+    transition: background-color var(--transition);
     
 
 
